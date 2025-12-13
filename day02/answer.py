@@ -66,7 +66,6 @@ def part_two():
                 for x in list(range(l_half_low, l_half_up + 1)):
                     num = int("".join([str(x)] * repeated))
                     if int(low) <= num <= int(up) and not(num in seen_nums):
-                        print("bad",num)
                         seen_nums.add(num)
                         range_ans += num
             
@@ -78,7 +77,6 @@ def part_two():
                     for x in range(l_half_low, 10 ** (l_len)):
                         num = int("".join([str(x)] * repeated))
                         if int(low) <= num <= int(up) and not(num in seen_nums):
-                            print("bad",num)
                             seen_nums.add(num)
                             range_ans += num
                 
@@ -89,15 +87,10 @@ def part_two():
                     for x in range(10 ** (l_len-1), l_half_up+1):
                         num = int("".join([str(x)] * repeated))
                         if int(low) <= num <= int(up) and not(num in seen_nums):
-                            print("bad",num)
                             seen_nums.add(num)
                             range_ans += num
 
             ans += range_ans
     print(ans)
                 
-            
-
-            
-
 part_two()
